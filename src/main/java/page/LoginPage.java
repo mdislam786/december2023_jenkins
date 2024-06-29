@@ -42,7 +42,7 @@ public class LoginPage {
 			public void clickSignInButton() {
 				SignInButton.click();
 				try {
-					Thread.sleep(3000);
+					Thread.sleep(15000);
 				} catch (InterruptedException e) {				
 					System.out.println("Unable to click on sign in button. Error:" + e.getMessage());
 				}
