@@ -23,9 +23,11 @@ public class LoginPageTest extends TestBase {
 	@Test
 	public void loginTest() {
 		loginPageObj.enterUserName(ConfigReader.getProperty("username"));		
-		System.out.println("print something!");
+		System.out.println("Username entered!");
 		loginPageObj.enterPassword(ConfigReader.getProperty("password"));
+		System.out.println("Password entered!");
 		loginPageObj.clickSignInButton();
+		System.out.println("Sign in button clicked!");
 		takeScreenshot(driver);
 	}
 
@@ -34,10 +36,10 @@ public class LoginPageTest extends TestBase {
 		loginPageObj.enterUserName(ConfigReader.getProperty("username"));
 		loginPageObj.enterPassword(ConfigReader.getProperty("password"));
 		loginPageObj.clickSignInButton();
+		takeScreenshot(driver);
 		String expectedTitle = "Codefios";
 		String actualTitle = loginPageObj.getPageTitle();
-		Assert.assertEquals(actualTitle, expectedTitle);
-		takeScreenshot(driver);
+		Assert.assertEquals(actualTitle, expectedTitle);		
 	}
 
 	@AfterMethod

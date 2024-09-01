@@ -18,6 +18,7 @@ import config.ConfigReader;
 public class TestBase {
 
 	public static WebDriver driver;
+	
 
 	public static void initDriver() {
 
